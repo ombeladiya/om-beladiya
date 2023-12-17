@@ -16,7 +16,7 @@ function Contact() {
     else if (n == 3) {
       location.href = 'https://www.instagram.com/_beladiya_1854/?igshid=OGQ5ZDc2ODk2ZA%3D%3D'
     }
-    else if (n == 'cd..') {
+    else if (n == 'Cd..') {
       navigate('/')
     }
     else {
@@ -31,12 +31,12 @@ function Contact() {
           <br />
           <br />Click or Input in command line
           <br />
-          Enter 'cd..' to go back
+          Enter 'Cd..' to go back
           <br /><br />
           <a className='links' href="mailto:ombeladiya1854@gmail.com">1 ~ Email: ombeladiya1854@gmail.com</a>
-          <br />
+          <br /><br />
           <a className='links' href="https://www.linkedin.com/in/om-beladiya-0593331b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">2 ~ LinkedIn: linkedincom/in/om-beladiya</a>
-          <br />
+          <br /><br />
           <a className='links' href="https://www.instagram.com/_beladiya_1854/?igshid=OGQ5ZDc2ODk2ZA%3D%3D">3 ~ Instagram: instagram.com/_beladiya_1854</a>
           <br />
         </div>

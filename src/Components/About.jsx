@@ -14,7 +14,7 @@ const inputhandler=(n)=>{
   if(n==1){
     location.href='https://landmen11.up.railway.app'
   } 
-  else if(n=='cd..') {
+  else if (n == 'Cd..') {
     navigate('/')
   }
  else{
@@ -34,7 +34,7 @@ const inputhandler=(n)=>{
        <br/>
     <br/>Click or Input in command line
     <br/>
-      Enter 'cd..' to go back
+            Enter 'Cd..' to go back
     <br/><br/>
      <Link className='links' to='/'>1 ~ Resume</Link>
        </div>

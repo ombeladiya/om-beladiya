@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .links{
     text-decoration: none;
     color:rgb(43, 182, 237);
@@ -15,12 +19,14 @@
   width:80vw;
   display: flex;
   margin: auto;
+  margin-top: 10px;
 }
 .aboutme{
   width: 100%;
   text-align: justify;
   font-size: 14px;
   color: rgb(43, 182, 237);
+    /* color: rgb(222, 13, 117); */
 }
 .aboutme>span{
   visibility: hidden;
@@ -31,7 +37,6 @@ pre{
   background-clip: text;
   color: transparent;
   font-size: 14px;
-  padding: 1rem; /* Adjust padding as needed */
 }
 .terminal{
   width: 100vw;
@@ -40,6 +45,8 @@ pre{
 
 @media screen and (max-width:600px) {
   .container{
-    width: 100vw;
+    width: 98vw;
+      margin-top: 5px;
+      margin-bottom: 5px;
   }
 }
