@@ -4,7 +4,7 @@ import Terminal, { ColorMode, TerminalOutput } from 'react-terminal-ui';
 import figlet from 'figlet';
 import standard from "figlet/importable-fonts/Standard.js";
 import big from "figlet/importable-fonts/Train";
-import amc3line from "figlet/importable-fonts/AMC 3 Line";
+import amc3line from "figlet/importable-fonts/Alligator";
 import ascii3d from "figlet/importable-fonts/3D-ASCII";
 import max4 from "figlet/importable-fonts/4Max";
 import varsity from "figlet/importable-fonts/Varsity";
@@ -16,7 +16,7 @@ function Home() {
   useEffect(() => {
     const fetchRandomFont = async () => {
       try {
-        // Manually define a list of commonly available Figlet fonts
+        //list of commonly available Figlet fonts
         const availableFonts = [
           standard,
           amc3line,
@@ -29,7 +29,6 @@ function Home() {
         // Select a random font
         const randomIndex = Math.floor(Math.random() * availableFonts.length);
         const randomFontType = availableFonts[randomIndex];
-
         figlet.parseFont("Ghost", randomFontType);
         // Generate Figlet text with the random font
         figlet.text(
@@ -47,7 +46,6 @@ function Home() {
               return;
             }
             setFigletText(data);
-            console.log(data)
           }
         );
       } catch (error) {
@@ -55,9 +53,9 @@ function Home() {
       }
     };
     fetchRandomFont();
-  }, []); // Empty dependency array ensures that this effect runs only once on component mount
+  }, []);
 
-  const [terminalLineData, setTerminalLineData] = useState([ <TerminalOutput> </TerminalOutput>]);
+  const [terminalLineData, setTerminalLineData] = useState([]);
 
   const inputhandler = (n) => {
     if (n == 1) {
@@ -69,7 +67,7 @@ function Home() {
     else if (n == 3) {
       navigate('/about')
     } else {
-      setTerminalLineData(prevData => [...prevData, <TerminalOutput ><span className='invalid'>Invalid Command!! Enter from [1,2,3]</span></TerminalOutput>])
+      setTerminalLineData(prevData => [...prevData, <TerminalOutput ><span className='invalid'>Invalid Command!! <br className='invalidbr' />Enter from [1,2,3]</span></TerminalOutput>])
     }
   }
   return (

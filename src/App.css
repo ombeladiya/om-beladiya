@@ -2,51 +2,65 @@
   margin: 0;
   padding: 0;
 }
-.links{
-    text-decoration: none;
-    color:rgb(43, 182, 237);
+.links {
+  text-decoration: none;
+  color: rgb(43, 182, 237);
 }
-.links:visited{
-  color:rgb(43, 182, 237);
+.links:visited {
+  color: rgb(43, 182, 237);
 }
-.links:hover{
-  color: tomato;
+.links:active {
+  color: rgb(43, 182, 237);
 }
-.invalid{
- color: red;
+.links:hover {
+  color: lightsalmon;
 }
-.container{
-  width:80vw;
+
+.invalid {
+  color: red;
+}
+.container {
+  width: 80vw;
   display: flex;
   margin: auto;
   margin-top: 10px;
 }
-.aboutme{
+.aboutme {
   width: 100%;
   text-align: justify;
   font-size: 14px;
   color: rgb(43, 182, 237);
-    /* color: rgb(222, 13, 117); */
+  /* color: rgb(222, 13, 117); */
 }
-.aboutme>span{
+.aboutme>span {
   visibility: hidden;
 }
-pre{
-    background-image: linear-gradient(to bottom, #58008f, rgb(12, 176, 213));
-  -webkit-background-clip: text; /* For Safari and older versions of Chrome */
+.invalidbr {
+  display: none;
+}
+
+pre {
+  background-image: linear-gradient(to bottom, #58008f, rgb(12, 176, 213));
+  -webkit-background-clip: text;
+    /* For Safari and older versions of Chrome */
   background-clip: text;
   color: transparent;
   font-size: 14px;
+  margin-bottom: 10px;
 }
-.terminal{
+.terminal {
   width: 100vw;
   height: 100vh;
 }
 
+
 @media screen and (max-width:600px) {
-  .container{
-    width: 98vw;
+  .container {
+      width: 98.3vw;
       margin-top: 5px;
       margin-bottom: 5px;
   }
+.invalidbr {
+  display: block;
+}
 }

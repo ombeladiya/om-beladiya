@@ -4,17 +4,13 @@ import Terminal, { ColorMode, TerminalOutput } from 'react-terminal-ui';
 
 function Projects() {
   const navigate=useNavigate();
-    const [terminalLineData, setTerminalLineData] = useState([
-        <TerminalOutput>
-       </TerminalOutput>
-      ]);
-
+  const [terminalLineData, setTerminalLineData] = useState([]);
       
   const inputhandler=(n)=>{
     if(n==1){
       location.href='https://landmen11.up.railway.app'
     } 
-    else if (n == 'Cd..') {
+    else if (n.toLowerCase() == 'cd..') {
       navigate('/')
     }
    else{
@@ -25,13 +21,13 @@ function Projects() {
   return (
    
       <div className="container ">
-          <Terminal name='Projects' prompt='Om:~Home/Project $' colorMode={ ColorMode.Dark }  onInput={ terminalInput  =>  inputhandler(terminalInput) }>
+      <Terminal name='Projects' prompt='Om:~Home/Project $' colorMode={ColorMode.Dark} onInput={terminalInput => inputhandler(terminalInput)}>
             <div>
-            Here is, some of my projects 📂
+          A Compilation of My Work 📂
          <br/>
       <br/>Click or Input in command line
       <br/>
-          Enter 'Cd..' to go back
+          Enter 'cd..' to go back
       <br/><br/>
        <Link className='links' to='https://landmen11.up.railway.app'>1 ~ Name: landmen [An ecommerce MERN Stack Website]</Link><br/>
             </div>

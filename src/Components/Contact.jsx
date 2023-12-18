@@ -4,7 +4,7 @@ import Terminal, { ColorMode, TerminalOutput } from 'react-terminal-ui';
 
 function Contact() {
   const navigate = useNavigate();
-  const [terminalLineData, setTerminalLineData] = useState([<TerminalOutput></TerminalOutput>]);
+  const [terminalLineData, setTerminalLineData] = useState([]);
 
   const inputhandler = (n) => {
     if (n == 1) {
@@ -16,7 +16,7 @@ function Contact() {
     else if (n == 3) {
       location.href = 'https://www.instagram.com/_beladiya_1854/?igshid=OGQ5ZDc2ODk2ZA%3D%3D'
     }
-    else if (n == 'Cd..') {
+    else if (n.toLowerCase() == 'cd..') {
       navigate('/')
     }
     else {
@@ -31,7 +31,7 @@ function Contact() {
           <br />
           <br />Click or Input in command line
           <br />
-          Enter 'Cd..' to go back
+          Enter 'cd..' to go back
           <br /><br />
           <a className='links' href="mailto:ombeladiya1854@gmail.com">1 ~ Email: ombeladiya1854@gmail.com</a>
           <br /><br />

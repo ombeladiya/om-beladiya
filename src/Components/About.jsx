@@ -4,17 +4,13 @@ import Terminal, { ColorMode, TerminalOutput } from 'react-terminal-ui';
 
 function About() {
   const navigate=useNavigate();
-  const [terminalLineData, setTerminalLineData] = useState([
-      <TerminalOutput>
-     </TerminalOutput>
-    ]);
+  const [terminalLineData, setTerminalLineData] = useState([]);
 
-    
 const inputhandler=(n)=>{
   if(n==1){
     location.href='https://landmen11.up.railway.app'
   } 
-  else if (n == 'Cd..') {
+  else if (n.toLowerCase() == 'cd..') {
     navigate('/')
   }
  else{
@@ -34,7 +30,7 @@ const inputhandler=(n)=>{
        <br/>
     <br/>Click or Input in command line
     <br/>
-            Enter 'Cd..' to go back
+            Enter 'cd..' to go back
     <br/><br/>
      <Link className='links' to='/'>1 ~ Resume</Link>
        </div>
