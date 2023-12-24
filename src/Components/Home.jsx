@@ -67,23 +67,30 @@ function Home() {
     else if (n == 3) {
       navigate('/about')
     } else {
-      setTerminalLineData(prevData => [...prevData, <TerminalOutput ><span className='invalid'>Invalid Command!! <br className='invalidbr' />Enter from [1,2,3]</span></TerminalOutput>])
+      setTerminalLineData(prevData => {
+        return [...prevData, <TerminalOutput>
+          <span className='invalid'>Invalid Command!!
+           <br className='invalidbr' />
+           Enter from [1,2,3]</span>
+          </TerminalOutput>];
+      })
     }
   }
+ 
   return (
     <div className="container">
       <Terminal name='Om beladiya' prompt='Om:~Home $' colorMode={ColorMode.Dark} onInput={terminalInput => inputhandler(terminalInput)}>
         <pre >{figletText}</pre>
         <div >
-        Hello!👋 Welcome to my portfolio.
-      <br />Reflecting My Skills in Terminal Echoes!<br />
-      <br />Click or Input in command line
-      <br />
-      <Link className='links' to='/projects'>1 ~ Projects</Link>
-      <br />
-      <Link className='links' to='/contact'>2 ~ Contact</Link>
-      <br />
-      <Link className='links' to='/about'>3 ~ About</Link>
+          Hello!👋 Welcome to my portfolio.
+          <br />Reflecting My Skills in Terminal Echoes!<br />
+          <br />Click or Input in command line
+          <br />
+          <Link className='links' to='/projects'>1 ~ Projects</Link>
+          <br />
+          <Link className='links' to='/contact'>2 ~ Contact</Link>
+          <br />
+          <Link className='links' to='/about'>3 ~ About</Link>
         </div>
         {terminalLineData}
       </Terminal>

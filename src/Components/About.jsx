@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import Terminal, { ColorMode, TerminalOutput } from 'react-terminal-ui';
+import resume from './Om Beladiya.jpg';
 
 function About() {
   const navigate=useNavigate();
   const [terminalLineData, setTerminalLineData] = useState([]);
+  const [showresume,setshowresume]=useState(false);
 
 const inputhandler=(n)=>{
   if(n==1){
-    location.href='https://landmen11.up.railway.app'
+    setshowresume(true);
   } 
   else if (n.toLowerCase() == 'cd..') {
     navigate('/')
@@ -32,9 +34,11 @@ const inputhandler=(n)=>{
     <br/>
             Enter 'cd..' to go back
     <br/><br/>
-     <Link className='links' to='/'>1 ~ Resume</Link>
+     <Link className='links' onClick={()=>setshowresume(!showresume)} >1 ~ Resume</Link>
        </div>
           { terminalLineData }
+          <br/>
+        {showresume && <img src={resume} alt="Resume" />}
           </Terminal>
       </div>
     </div>
