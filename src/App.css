@@ -40,7 +40,7 @@
 }
 
 pre {
-  background-image: linear-gradient(to bottom, #58008f, rgb(12, 176, 213));
+  background-image: linear-gradient(to bottom, #a73ee8, rgb(12, 176, 213));
   -webkit-background-clip: text;
     /* For Safari and older versions of Chrome */
   background-clip: text;

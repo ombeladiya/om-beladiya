@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import Terminal, { ColorMode, TerminalOutput } from 'react-terminal-ui';
-import resume from './Om Beladiya.jpg';
+import resume from './Om Beladiya.png';
 
 function About() {
   const navigate=useNavigate();

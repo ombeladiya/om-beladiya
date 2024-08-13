@@ -8,7 +8,19 @@ function Projects() {
 
   const inputhandler = (n) => {
     if (n == 1) {
-      location.href = 'https://landmen11.up.railway.app'
+      location.href = 'https://landmen.onrender.com'
+    }
+    else if (n == 2) {
+      location.href = 'https://homepricepredicter.onrender.com'
+    }
+    else if (n == 3) {
+      location.href = 'https://expressjunction.onrender.com'
+    }
+    else if (n == 4) {
+      location.href = 'https://www.npmjs.com/package/pincode-to-address'
+    }
+    else if (n == 5) {
+      location.href = 'https://niyarbuy.netlify.app'
     }
     else if (n.toLowerCase() == 'cd..') {
       navigate('/')
@@ -29,7 +41,11 @@ function Projects() {
           <br />
           Enter 'cd..' to go back
           <br /><br />
-          <Link className='links' to='https://landmen11.up.railway.app'>1 ~ Name: landmen [An ecommerce MERN Stack Website]</Link><br />
+          <Link className='links' to='https://landmen.onrender.com'>1 ~ landmen [An ecommerce MERN Stack Website]</Link><br />
+          <Link className='links' to='https://homepricepredicter.onrender.com'>2 ~ Home Price Predictor </Link><br />
+          <Link className='links' to='https://expressjunction.onrender.com'>3 ~ Express Junction [Courier Aggregator System]</Link><br />
+          <Link className='links' to='https://www.npmjs.com/package/pincode-to-address'>4 ~ Pincode-to-address [an npm package]</Link><br />
+          <Link className='links' to='https://niyarbuy.netlify.app'>5 ~ Niyarbuy [Quick Commerce frontend Website]</Link><br />
         </div>
         {terminalLineData}
       </Terminal>
